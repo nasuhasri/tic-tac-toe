@@ -7,14 +7,19 @@
   </head>
   <body>
     <div class="container">
+      <div class="row mb-3">
+        <div class="col">
+          <a href="/tic/new" class="btn btn-success">New Game</a>
+        </div>
+      </div>
       <!-- row -->
       <!-- grid variable coming from tic.js -->
-      <% for(var i = 0; i < grid.length; i++) { %>
+      <% for(var x = 0; x < grid.length; x++) { %>
         <!-- col -->
         <div class="row">
-          <% for(var j = 0; j < grid[i].length; j++) { %>
-            <a href="#" class="col-sm border d-flex justify-content-center align-items-center grid-box">
-              <h1 class="bigger-h1"><%= grid[i][j] %></h1>
+          <% for(var y = 0; y < grid[x].length; y++) { %>
+            <a href="/tic/<%= x %>/<%= y %>" class="col-sm border d-flex justify-content-center align-items-center grid-box">
+              <h1 class="bigger-h1"><%= grid[x][y] %></h1>
             </a>
           <% } %>
         </div>

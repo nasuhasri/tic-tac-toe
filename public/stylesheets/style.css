@@ -13,8 +13,9 @@ a {
 }
 
 .grid-box:hover{
-  text-decoration-line: none;
-  background-color: black;
+  text-decoration: none;
+  /* background-color: black; */
+  background-color: #ffffed;
 }
 
 .bigger-h1{
