@@ -28,6 +28,7 @@ router.get('/', function(req, res, next) {
     res.render('index', { 
         grid: gridArray, 
         isWin: isWin,
+        winner: isWin ? (isFirstUSer ? firstMarker : altMarker): '',
         winningText: winning });
 });
 
