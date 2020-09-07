@@ -23,9 +23,12 @@ var isWin = false
 router.get('/', function(req, res, next) {
     var winning = ''
     if(isWin){
-        winning = (isFirstUSer ? firstMarker : altMarker) + 'You have won'
+        winning = (isFirstUSer ? firstMarker : altMarker) + ' have won'
     }
-    res.render('index', { grid: gridArray, winningText: winning });
+    res.render('index', { 
+        grid: gridArray, 
+        isWin: isWin,
+        winningText: winning });
 });
 
 /* Ni untuk update location then redirect ke page tic */
@@ -57,9 +60,9 @@ router.get('/:x/:y', function(req, res, next) {
 
         const row = gridArray[x].filter(element => element === marker)
 
-        if(row.length == gridArray.length){
-            isWin = true;
-            break;
+        if(row.length == gridArray[x].length){
+            isWin = true
+            break
         }
     }
 
