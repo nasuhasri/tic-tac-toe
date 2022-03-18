@@ -12,7 +12,8 @@
    - Use command; npm install
    - On windows use command; set DEBUG=myapp:* & npm start
      else; DEBUG=myapp:* & npm start
-   - Use this command to start server; npm start
+   - Use this command to start server; npm start (need to restart if there is changes)
+   - Instead use `nodemon app.js` OR `nodemon app` (changes automatically updated)
 
 3. Tutorial Javascript 2D array - https://www.geeksforgeeks.org/how-to-create-two-dimensional-array-in-javascript/
 
